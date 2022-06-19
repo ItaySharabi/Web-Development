@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="css/default.css">
+        <script src="tools/indice.js"></script>
+        <script>var current_class="first-steps";</script>
+        <script src="highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>First Steps in Javascript</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    </head>
+
+    <body>
+
+       <div class="page-container">
+           <header>
+               <div class="logo-area">
+                   <img src="img/logo_js.png" alt="logo javascript">
+               </div>
+               <div class="course-title">
+                   <h1>Javascript Course</h1>
+                   <h2>תוכנית ממר"ם</h2>
+               </div>
+
+           </header>
+
+           <main dir="rtl">
+               <h3>למה Javascript?</h3>
+               
+               <p>
+                    לאחר שלמדנו HTML ו CSS נוכל לבנות אתרים מושקעים. אבל ישנה בעיה - הם סטטים.
+                     אין שום אינטרקציה עם המשתמשים. 
+                 </p>
+
+                <p>
+                    כאשר בונים אתר עם שימוש בHTML ובCSS בלבד, המשתמשים יכולים לגלול למעלה ולמטה וללחוץ על קישורים.
+                    באמצעות Javascript אנחנו יכולים להוסיף שכבה של אינטרקציה אשר תהפוך את האתר שלנו להרבה יותר עשיר במונחים של שימושיות.
+
+                </p>
+
+                <p> 
+                    משתמשים יוכלו לפתוח ולסגור תפריטים, להרחיב ולצמצם חלקים מסויימים,
+                    לנווט דרך סלייד של תמונות, להשתמש בפילטרים והרבה יותר.
+                    <strong>עם Javascript, האתר שלנו יהיה דינאמי!</strong>
+                </p>
+
+               <h3>איפה לכתוב קוד של Javascript?</h3>
+
+               <p>
+                   קוד של Javascript יכול להכתב בתגיות. התגיות נראות כמו של HTML ויכולות להכתב 
+                   בhead או בbody. ברוב במקרים המקום הטוב ביותר לכתוב את התגיות של הסקריפט יהיה בסוף תגית הbody.
+               </p>
+               
+                <pre>
+                   <code class="javascript">
+    &lt;!DOCTYPE HTML&gt;
+    
+    &lt;html&gt;
+
+        &lt;head&gt;
+            &lt;script&gt;
+
+                // Javascript code can be written here
+
+            &lt;/script&gt;
+        &lt;/head&gt;
+        
+        &lt;body&gt;
+
+
+            &lt;!-- page content  --&gt;
+
+
+            &lt;script&gt;
+
+                // Javascript code can be written here
+
+            &lt;/script&gt;
+
+        &lt;/body&gt;
+    &lt;/html&gt;
+                    </code>
+                </pre>
+
+                <p>
+                    עם זאת, המקום הטוב ביותר לכתוב את הקוד של Javascript הוא בקובץ js נפרד.
+                    במקרה זה, תגית הסקריפט תשרת כקישור לקובץ האמור.
+                </p>
+
+                <pre>
+                    <code class="javascript">
+    &lt;body&gt;
+
+
+        &lt;!-- the html page  --&gt;
+
+
+        &lt;script src='js/scripts.js'&gt;&lt;/script&gt;
+        
+
+    &lt;/body&gt;
+                    </code>
+                </pre>
+
+                <h4>כתיבת הJavascript statements הראשונים</h4>
+                <p> 
+                    באמצעות קובץ הscripts.js שבדיוק יצרנו, נכתוב כמה statements.
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    alert('Sending a message via alert');
+
+    console.log('Sending a message via the console');
+                    </code>
+                </pre>
+
+                <p>
+                    כעת תרעננו את הדף ותראו מה קורה. ההודעה שמועברת דרך פונקציית הalert מופיעה בתוך הודעה קופצת.
+                    ההודעה שנשלחה דרך הconsole.log יכולה להיראות בבדיקה של הדפדפן (inspector).
+                </p>
+
+                <p>
+                    הדברים שאנחנו שולחים לconsole הם לא עבור המשתמש, למעשה זהו כלי מאוד שימושי לזיהוי טעויות בקוד
+                    והבנה מה הקוד שלנו עושה.
+                </p>
+
+
+
+           </main>
+
+       </div>
+       
+       <script src="js/scripts.js"></script>
+
+    </body>
+
+</html>

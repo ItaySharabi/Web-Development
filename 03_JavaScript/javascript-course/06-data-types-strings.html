@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="css/default.css">
+        <script src="tools/indice.js"></script>
+        <script>var current_class="tipos_dados_strings";</script>
+        <script src="highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Data Types - Strings</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+
+       <div class="page-container">
+           <header>
+               <div class="logo-area">
+                   <img src="img/logo_js.png" alt="logo javascript">
+               </div>
+               <div class="course-title">
+                   <h1>Javascript Course</h1>
+                   <h2>תוכנית ממר"ם</h2>
+               </div>
+           </header>
+
+           <main dir="rtl">
+               <h3>מבני נתונים</h3>
+               
+                <p>
+                    למשנים ניתן לתת ערכים מטיפוסים שונים. הטיפוס הבסיסי ביותר הוא <strong>מחרוזות</strong>, רצף של תווים בין גרשיים כמו 
+                    לדוגמא<br> "John", "I'm 32 years old" או "www.google.com" ו <strong>מספרים</strong>.
+                </p>
+                    
+                <p>
+                    שני הטיפוסים הללו בנוסף לטיפוס <strong>בוליאנים</strong> (true או false) ו <strong>Null and Undefined</strong>, 
+                    ידועים בתור <strong>טיפוסים פרימיטיביים</strong>. 
+                    בנוסף לטיפוסים הפרימיטיביים ישנם עוד שני סוגי טיפוסים שהם <strong>מערכים</strong> ו <strong>אובייקטים</strong>. 
+                    נסביר עליהם בהרחבה בהמשך.
+                </p>
+
+                <p>
+                    כדי לבדוק מה הטיפוס של משתנה אפשר להשתמש באופרטור typeof:
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    var firstName = "John";  
+    
+    console.log( typeof firstName ); // the result will be "string"
+
+    var age = 40;  
+    
+    console.log( typeof age ); // the result will be "number"
+                    </code>
+                </pre>
+
+                <h3>מחרוזות</h3>
+
+                <p>
+                    כמו בשפות קודמות, מחרוזות הן רצף של תווים. בעצם טקסט. מחרוזות מזוהות באמצעות גרשיים או גרש בודד.
+                </p>
+
+                <p>
+                    כמה דוגמאות למשתנים עם השמות של מחרוזות:
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    var firstName = "John";  // we can use double quotation marks
+    
+    var lastName = 'Doe'; // or single quotation marks
+    
+    var passportNumber = 'XYZ0123';  
+    
+    var phoneNumber = "909299999";
+    
+    var email = 'john_doe@gmail.com';
+    
+    var bio = "John Doe started his web developer career in 2020 and has contributed to many important projects, like...";
+                    </code>
+                </pre>
+
+                <p>
+                    נשים לב כי בדוגמא לעיל במשתנה phoneNumber יש ערך של מספרים בלבד. אם כך, למה השתמשנו במחרוזות 
+                    ולא במספרים?
+                </p>
+
+                <p>
+                    למרות שהערך הוא מספרים בלבד, לא נשתמש בערך לחישובים מתמטיים ולכן שימוש במחרוזות ישרת אותנו טוב יותר.
+                </p>
+
+                <p>
+                    מצד שני, אם נרצה לאחסן שנת לידה של מישהו כנראה שנעדיף טיפוס מספרים, כיוון שנרצה לחשב 
+                    הפרש בין השנה הנוכחית לשנת הלידה שלו כדי לגלות את גילו.
+                </p>
+
+                <p>
+                    ישנן כמה פעולות חשובות שניתן לעשות עם מחרוזות, כנראה למטה:
+                </p>
+
+                <ul>
+                    <li><h5>שרשור</h5></li>
+                </ul>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    var firstName = "John";
+
+    var lastName = "Doe";
+
+    var fullName = firstName + " " + lastName;
+
+    console.log(fullName); 
+
+    // The result will be "John Doe"
+
+    // Therefore the plus sign (+) is used for concatenation with string values.
+                    </code>
+                </pre>
+                
+                <ul>
+                    <li><h5>אורך מחרוזת ואינדקס</h5></li>
+                </ul>
+
+                <p>
+                    כיוון שמחרוזות הן רצף תווים, יש להן אורך. לכל תו יש מיקום מסויים ברצף, הנקרא אינדקס.
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    var firstName = "John";
+
+    console.log(firstName.length); // The result will be 4
+
+    /* 
+    The length property of a string represents its number of characters.
+    Each character has its own index, starting from zero.
+    White spaces also count. 
+    */
+
+    console.log(firstName[0]); // The result will be 'J'
+    
+
+    // We can access each character of a string using their index inside brackets. 
+
+                    </code>
+                </pre>
+
+                <ul>
+                    <li><h5>String replace</h5></li>
+                </ul>
+
+                <p>
+                    ישנן דרכים שימושיות לשימוש במתודה replace. נאמר כי יש לנו את הקישור: "https://www.youtube.com". 
+                    בקלות נוכל להסיר את //:https בהחלפתו עם מחרוזת ריקה. בשביל להשתמש במתודה תחילה נכתוב את 
+                    החלק אותו נרצה להסיר ואז את הטקסט איתו נרצה להחליף.
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    var url = "https://www.youtube.com";
+
+    console.log( url.replace( "https://" , "" ) ); // It will show "www.youtube.com"
+
+                    </code>
+                </pre>
+
+                <p>
+                    ישנן עוד פעולות רבות שאפשר לבצע על מחרוזות. אם תרצו לחקור עצמאית תוכלו לעשות זאת 
+                     <a target="_blank" href="https://www.w3schools.com/js/js_string_methods.asp">בקישור</a>.
+                </p>
+
+           </main>
+
+        </div>
+        <script src="js/scripts.js"></script> 
+    </body>
+
+</html>

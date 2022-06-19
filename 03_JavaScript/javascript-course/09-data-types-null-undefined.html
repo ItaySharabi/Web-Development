@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="css/default.css">
+        <script src="tools/indice.js"></script>
+        <script>var current_class="tipos_dados_null";</script>
+        <script src="highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Data Types - null and undefined</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+
+       <div class="page-container">
+           <header>
+               <div class="logo-area">
+                   <img src="img/logo_js.png" alt="logo javascript">
+               </div>
+               <div class="course-title">
+                   <h1>Javascript Course</h1>
+                   <h2>תוכנית ממר"ם</h2>
+               </div>
+           </header>
+
+           <main dir="rtl">
+               <h3>Null and Undefined</h3>
+               
+                <p>
+                    למשתנים אין תמיד ערך. כדי לייצג חוסר השמה משתמשים בnull ו undefined.
+                </p>
+
+                <h4>
+                    Undefined
+                </h4>
+
+                <p>
+                    כאשר אנו מצהירים על משתנה מבלי לבצע השמה. הערך והטיפוס של המשתנה הם undefined.
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+
+    var noValue;
+    console.log(noValue); // undefined
+    console.log(typeof noValue); // undefined
+
+                    </code>
+                </pre>
+
+                <p>
+                    גם במקרים אחרים מתפקד undefined, לדוגמא כאשר אנו 
+                    מנסים לגשת לאינדקס לא קיים במחרוזת:
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+
+    var name = "Peter";
+    console.log(name[0]); // Console will show "P"
+    console.log(name[4]); // Console will show "r"
+    console.log(name[10]); // Console will show undefined
+
+
+                    </code>
+                </pre>
+
+                <p>
+                    כאשר אנחנו מדברים על מערכים ואובייקטים אנו נראה ש:
+
+                    <li>
+                        כמו במחרוזות, למערכים יש אורך, 
+                        ולכל אלמנט במערך יש אינדקס בעזרתו אפשר לגשת אליהם. 
+                        כאשר ננסה לגשת לאינדקס מחוץ למערך, נקבל את הערך undefined.
+                    </li>
+                    <br>
+                    <li>
+                        לאובייקטים יש שדות (תכונות). לאובייקט מכונית כנראה יהיה שדה "יצרן" או "סוג" אבל כנראה 
+                        שלא יהיו לו שדה "אימייל". אם ננסה לגשת לשדה לא קיים של אובייקט, נקבל את הערך undefined.
+                    </li>
+                </p>
+
+
+
+                <h4>
+                    Null
+                </h4>
+
+                <p>
+                    null הוא לא טיפוס, אלא אובייקט. ומסיבות כאלו ואחרות אנשים ממליצים שלא להשתמש בו בJavascript.
+                </p>
+
+                <p>
+                    השימוש בnull הוא בעיקר בשביל לתת ערך שמשמעותו "כלום" למשתנה עם השמה קודמת:
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+
+    var temperature = 35;
+    console.log(temperature);
+
+    temperature = null;
+    console.log(temperature); // The console will show null
+    console.log(typeof temperature); // The console will show object - which could be misleading
+    
+                    </code>
+                </pre>
+
+                <p>
+                    עם זאת, את אותה פעולה אפשר לעשות עם שימוש בundefined:
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+
+    var temperature = 35;
+    console.log(temperature);
+
+    temperature = undefined;
+    console.log(temperature); // The console will show undefined
+    
+                    </code>
+                </pre>
+
+                <p>
+                    למעשה, Javascript מחשיבה את null ואת undefined כשווי ערך:
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+
+    console.log(undefined == null);  // The console will show true
+
+                    </code>
+                </pre>
+
+                <p> 
+                    חלק מהאנשים ככל הנראה משתמשים בnull בשביל להפריד בין המקרים בהם יש למשתנה ערך קודם שאותו רוצים 
+                    "לאפס". 
+                </p>
+
+                <p>
+                    בדוגמאות שלנו לא נשתמש בnull אלא בundefined בלבד.
+                </p>
+
+           </main>
+
+        </div>
+
+        <script src="js/scripts.js"></script> 
+
+    </body>
+
+</html>
+

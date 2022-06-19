@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="css/default.css">
+        <script src="tools/indice.js"></script>
+        <script>var current_class="variaveis";</script>
+        <script src="highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Variables</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+
+       <div class="page-container">
+           <header>
+               <div class="logo-area">
+                   <img src="img/logo_js.png" alt="logo javascript">
+               </div>
+               <div class="course-title">
+                   <h1>Javascript Course</h1>
+                   <h2>תוכנית ממר"ם</h2>
+               </div>
+           </header>
+
+           <main dir="rtl">
+               <h3>משתנים</h3>
+               
+                <p>
+                    תוכניות מחשב קיימות בשביל לעשות מניפולציות על המידע. מה שהן עושות בעקרון הוא לקבל קלט, לעבד אותו
+                     ולהראות פלט כלשהו. עד כה לא ראינו את האתר שלנו כתוכנית מחשב כיוון שהיו לנו רק דפים סטטים. 
+                     אך מעתה ואילך, אם נרצה שהאתר שלנו יהיה דינאמי ואינטרקטיבי נצטרך לחשוב עליו כתוכנת מחשב שרצה על האינטרנט.
+                </p>
+
+                <p>
+                    הסתכלו בדוגמא הבאה אשר מקיימת אינטרקציה עם המשתמש.
+                </p>
+
+                <input id="user_greeting_input" type="text" placeholder="הקלד את שמך...">
+                <button id="user_greeting_confirm">Confirm</button>
+                <br>
+                <strong id="user_greeting_message"></strong>
+                <br>
+
+                <p>
+                    בדוגמא הזאת אנחנו עובדים עם מידע. מקבלים קלט מהמשתמש, מעבדים את הודעת הgreeting ומראים אותה בתוך אלמנט HTML. 
+                    קיימת בנוסף גם לוגיקה, כיוון שאם השדה ישאר ריק, נחליף את הקלט בguest user.
+                </p>
+
+                <p>
+                    כדי לעבוד עם מידע בתוכנת מחשב, אנחנו צריכים <strong>משתנים.</strong>
+                </p>
+
+                <p>
+                   משתנים נועדו לשמור מידע שבו נשתמש לאחר מכן. לכן ניתן למשתנים שמות כדי שנוכל להתייחס אליהם. השם של משתנה נקרא גם מזהה.
+                </p>
+
+                <p>
+                    יצרנו משתנה באמצעות המילה "var" ולאחריה השם שלו. לאחר מכן ביצענו השמה למשתנה באמצעות הסימן =.
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    var user_name = "guest user";
+                    </code>
+                </pre>
+
+                <p>
+                    לאחר השמת המחרוזת "guest user" למשתנה, נוכל לגשת אליו בכל זמן שנרצה. כדי לבדוק זאת, ניצור
+                    משתנה כמו הנראה למעלה, ולאחר מכן נריץ את הstatement:
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    console.log(user_name);
+                    </code>
+                </pre>
+
+                <p>
+                    בשביל מה לשלוח את הערך הנ"ל לconsole? זאת דרך טובה לבדוק את הקוד שלנו. כעת כשאנחנו יודעים שהמשתנה שלנו נוצר והערך
+                     הושם בהצלחה למשתנה, נוכל להשתמש בו כדי ליצור את הודעת הgreeting ולשים את ערכו באלמנט הHTML.
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    document.getElementById("user_greeting_message").innerHTML = "Hello " + user_name + "!";
+                    </code>
+                </pre>
+
+                <p>
+                    כדי ליצור את ההודעה הנראית למעלה, אנחנו מבצעים שרשור מחרוזות. בהמשך נראה מבני נתונים בJavascript.
+                </p>
+
+                <p>לפני שנמשיך, גם בJavascript יש לשמות המשתנים חוקים.</p>
+
+                <h4>שמות משתנים</h4>
+               
+                <p>
+                    שמות משתנים יכולים להכיל: 
+                </p>
+
+                <ul>
+                    <li>אותיות</li>
+                    <li>מספרים</li>
+                    <li>קו תחתי (_)</li>
+                    <li>תו דולר ($)</li>
+                </ul>
+
+                <p>
+                    דגש חשוב: משתנים יכולים להגיל מספרים אבל  <strong>הם לא יכולים להתחיל במספר.</strong> רווחים גם הם לא חוקיים.
+                </p> 
+
+                <p>כמה דוגמאות לשמות משתנים:</p>
+                    
+
+                    <pre dir="ltr">
+                        <code>
+    a             // ok
+    
+    name          // ok
+    
+    $name         // ok
+    
+    students_name // ok
+    
+    student_1     // ok
+    
+    1_b           // invalid because it starts with a number
+    
+    my-name       // invalid because it has a dash (only underscores are allowed)
+    
+    my name       // invalid because it contains a white space
+    
+    new           // invalid because 'new' is a Javascript reserved word, like will be explained below.
+                        </code>
+                    </pre>
+
+                    
+                 <p>
+                    הימנעו משימוש באותיות בעברית. למרות שהקוד ירוץ, עדיף לכתוב קוד שיובן לכל מי שדובר אנגלית.
+
+                </p>
+
+                <h4>מילים שמורות</h4>
+               
+                <p>
+                    כמו בשפות אחרות, ישנן מילים שמורות שנועדו לפקודות ופונקציות ולכן לא יוכלו לשמש כשמות למשתנים. דוגמא 
+                    לכמה מילים שמורות:
+                </p>
+
+                <ul>
+                    <li>function</li>
+                    <li>if</li>
+                    <li>else</li>
+                    <li>var</li>
+                    <li>new</li>
+                    <li>return</li>
+                    <li>break</li>
+                    <li>default</li>
+                    <li>in</li>
+                </ul>
+
+                <a target="_blank" href="https://www.w3schools.com/js/js_reserved.asp">רשימה של כל המילים השמורות אפשר לראות כאן</a>
+                
+                <h4>רגישות לאותיות גדולות/ קטנות</h4>
+               
+                <p>
+                    כמו שהוסבר קודם, Javascript רגישה לאותיות גדולות/ קטנות, אז לא לשכוח זאת כשאשר יוצרים משתנים. 
+                    אם ניצור משתנה בשם "username" ואז ננסה לקרוא לו עם "Username" נקבל הודעת שגיאה.
+                </p>
+
+                <h4>כדאי לתת לשמות המשתנים שמות משמעותים המעידים על התפקיד שלהם</h4>
+
+                <p>
+                    קוד טוב צריך להיות מובן בקלות, לא רק למי שכתב אותו אלא גם עבור אנשים אחרים, אז קחו בחשבון כשאר אתם בוחרים שמות למשתנים. 
+                    אם נכתוב תוכנית המקבלת כקלט שם פרטי ושם משפחה ממשתמש, אלו מהשמות הבאים כדאי שנשתמש:
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    //Option # 1:
+    var first_name = "John";
+    var last_name = "Doe";
+
+    //Option # 2:
+    var name1 = "John";
+    var name2 = "Doe";
+
+    //Option # 3:
+    var a = "John";
+    var b = "Doe";
+                    </code>
+                </pre>
+
+                <p>
+                    קל לראות שהאפשרות הראשונה היא הטובה ביותר. האפשרות השניה סבירה אבל לא לגמרי טובה. האפשרות השלישית גרועה מאוד.
+                </p>
+
+                <h4>מוסכמה לשמות</h4>
+
+                <p>
+                    לשפות תכנות יש בדרך כלל מוסכמה לכתיבת שמות כדי שהקוד יהיה קריא יותר. Javascript לרוב תבחר במוסכמה של <strong>lower camelCase</strong> בשביל שמות 
+                    משתנים. הכוונה היא שהאות הראשונה היא קטנה והאות הראשונה של המילה הבאה היא גדולה.
+                </p>
+                
+                <pre dir="ltr">
+                    <code>
+    // camelCase examples:
+    
+    firstName
+    
+    lastName
+    
+    exchangeRate
+    
+    maxContainerWidth
+    
+    screenSize
+                    </code>
+                </pre>
+
+                <p>
+                    בנוסף נפוץ שימוש בכתיבת השמות באותיות קטנות כאשר ההפרדה בין מילים היא עם קו תחתי, כמו last_name או max_container_width. 
+                    תבחרו איזה סגנון שמרגיש לכם יותר נכון, העיקר שתישארו עקביים. בנוסף, נסו לשמור על שמות קצרים ככל הניתן, כלומר השם firstName 
+                    טוב יותר מאשר השם firstNameOfTheUser.
+                </p>
+                 
+
+           </main>
+
+        </div>
+        
+        <script src="js/scripts.js"></script> 
+    </body>
+
+</html>

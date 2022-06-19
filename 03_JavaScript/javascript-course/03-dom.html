@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="css/default.css">
+        <script src="tools/indice.js"></script>
+        <script>var current_class="dom";</script>
+        <script src="highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DOM - Document Object Model</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+
+       <div class="page-container">
+           <header>
+               <div class="logo-area">
+                   <img src="img/logo_js.png" alt="logo javascript">
+               </div>
+               <div class="course-title">
+                   <h1>Javascript Course</h1>
+                   <h2>תוכנית ממר"ם</h2>
+               </div>
+           </header>
+
+           <main dir="rtl">
+               <h3>DOM - Document Object Model</h3>
+               
+                <p> 
+                    כעת לאחר היכרות קצרה עם איך שJavascript עובדת, נלמד איך ליצור אינטרקציה 
+                    עם אלמנטים בדף שלנו.
+                </p>
+
+                <h4>מה זה DOM?</h4>
+
+                <p>
+                הDOM הוא אובייקט שנוצר על ידי הדפדפן ברגע שדף נטען. האובייקט הזה מכיל את כל הקודקודים של 
+                דף הHTML שלנו, כלומר האלמנטים של הHTML. דוגמא פשוטה מופיעה להלן:
+                </p>
+                    
+
+                <pre dir="ltr">
+                    <code class="html">
+    
+    &lt;html&gt;
+        
+        &lt;head&gt;
+            &lt;title&gt;My Title&lt;/title&gt;
+        &lt;/head&gt;
+        
+        &lt;body&gt;
+            &lt;h1&gt;My Header&lt;/h1&gt;
+            &lt;a href="#" &gt;My Link&lt;/a&gt;
+        &lt;/body&gt;
+
+    &lt;/html&gt;
+
+                    </code>
+                </pre>
+
+                <p>כאשר הדף נטען, הדפדפן מייצר את עץ הDOM, כמו שנראה כאן:</p>
+
+                <figure>
+                    <img src="img/dom.png" alt="Document Object Model">
+                    <figcaption>בתמונה: ייצוג של עץ DOM.</figcaption>
+                </figure>
+                <br>
+               
+                <p>
+                    בתמונה ניתן לראות שההורה אלמנט של כל שאר האלמנטים בDOM הוא אובייקט מסמך. כך שתמיד 
+                    נשתמש באובייקט הזה כדי לבחור אלמנטים בדף שלנו.
+                </p>
+
+                <p>
+                    בעזרת הDOM נוכל:
+                </p>
+
+                <ul>
+                    <li>להוסיף, לשנות ולהסיר אלמנטים של HTML</li>
+                    <li>לשנות את האטריביוטים של אלמנט HTML (כמו class או src של תמונה)</li>
+                    <li>לשנות את הCSS</li>
+                    <li>להגיב לאירועים בדף (לחיצה על העכבר, גלילה, קלט, וכו)</li>
+
+                </ul>
+
+           </main>
+
+        </div>
+        
+        <script src="js/scripts.js"></script>
+    
+    </body>
+
+</html>

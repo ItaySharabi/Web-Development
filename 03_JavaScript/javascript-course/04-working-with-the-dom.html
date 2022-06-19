@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="css/default.css">
+        <script src="tools/indice.js"></script>
+        <script>var current_class="working_dom";</script>
+        <script src="highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Working With the DOM</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+
+       <div class="page-container">
+           <header>
+               <div class="logo-area">
+                   <img src="img/logo_js.png" alt="logo javascript">
+               </div>
+               <div class="course-title">
+                   <h1>Javascript Course</h1>
+                   <h2>תוכנית ממר"ם</h2>
+               </div>
+           </header>
+
+           <main dir="rtl">
+               <h3>עבודה עם הDOM</h3>
+               
+                <p>
+                    כדי ליצור אינטרקציה עם האלמנטים של HTML בדף שלנו נצטרך להשתמש במתודות ושדות של אובייקט המסמך.
+                </p>
+
+                <h4>getElementById and innerHTML</h4>
+
+                <p>
+                    כדי לבחור אלמנט HTML נוכל לחפש אותם על ידי הclass שלהם, Id, שם הtag (h1, p, img, div, וכו) ועוד. נתחיל
+                    בId כיוון שזוהי הדרך הקלה ביותר.
+                </p>
+
+                <div class="caixa_outer blueborder">
+
+                    <div id="blue_box">
+                          לאלמנט הנוכחי יש "Id="blue_box. האם אתם יכולים לקחת את הטקסט בפנים ולשלוח לconsole? האם אתם יכולים לשנות את התוכן?
+                    </div>
+                </div>
+                    
+                <p>
+                    כדי לבחור בתיבה הכחולה נשתמש במתודה getElementByID ובשדה innerHTML. (זיכרו שJavascript היא רגישה
+                    לאותיות קטנות/ גדולות, לכן שימו לב מתי צריך להשתמש באות גדולה).
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    
+    // Getting the content of an element
+    document.getElementById("blue_box").innerHTML;
+
+    // Changing the content of an element
+    document.getElementById("blue_box").innerHTML = "This will be the new content of the element.";
+
+                    </code>
+                </pre>
+
+                <p>
+                    כעת בהתאם למה שראינו, ננסה לשלוח לconsole את התוכן שנמצא בתיבה הכחולה. לאחר מכן נשנה את תוכנה.
+                </p>
+
+                <pre dir="ltr">
+                    <code class="javascript">
+    
+    console.log( document.getElementById("blue_box").innerHTML );
+    document.getElementById("blue_box").innerHTML = "Some new content";
+                    </code>
+                </pre>
+
+                <p>
+                     בתחילה אולי הדוגמא נראית פשוטה מדי אך זאת ההתחלה שבה מבינים איך לעבוד עם אלמנטים והתוכן שלהם.
+                </p>
+
+           </main>
+
+        </div>
+
+        <script src="js/scripts.js"></script>
+
+    </body>
+
+</html>
